@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f2eb">
+  <meta name="description" content="A practical, interactive aeromodelling course: understand flight, design and build RC aircraft, learn radio systems, and fly responsibly.">
+  <title>Airframe Academy | Learn aeromodelling</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data/curriculum.js"></script>
+  <script defer src="data/deep-dives.js"></script>
+  <script defer src="data/quiz-bank.js"></script>
+  <script defer src="data/glossary.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to lesson content</a>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Airframe Academy home">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span class="brand-name">AIRFRAME<span>ACADEMY</span></span>
+    </a>
+    <nav class="top-nav" aria-label="Primary navigation">
+      <a class="top-link is-active" href="#home" data-view="home">Learning path</a>
+      <a class="top-link" href="#quiz" data-view="quiz">Quiz centre</a>
+      <a class="top-link" href="#how-to-use" data-view="how-to-use">How to use</a>
+      <a class="top-link" href="#design-lab" data-view="design-lab">Design lab</a>
+      <a class="top-link" href="#field-guide" data-view="field-guide">Field guide</a>
+      <a class="top-link" href="#sources" data-view="sources">Sources</a>
+    </nav>
+    <div class="top-actions">+
+      <label class="search-box" for="site-search">
+        <span aria-hidden="true">/</span>
+        <input id="site-search" type="search" placeholder="Search lessons..." autocomplete="off" aria-label="Search lessons">
+        <kbd>Ctrl K</kbd>
+      </label>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Change color theme" title="Change color theme">
+        <span aria-hidden="true">◉</span>
+      </button>
+      <button class="icon-button mobile-menu-button" id="mobile-menu-button" type="button" aria-label="Open lesson menu" aria-expanded="false">
+        <span aria-hidden="true">☰</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="lesson-sidebar" aria-label="Course lessons">
+      <div class="sidebar-top">
+        <div class="eyebrow">THE FLIGHT SCHOOL</div>
+        <div class="course-heading">Foundations to flight</div>
+        <div class="progress-card">
+          <div class="progress-card-top">
+            <span>YOUR FLIGHT LOG</span>
+            <span id="progress-label">0 / 14</span>
+          </div>
+          <div class="progress-track" role="progressbar" aria-label="Course completion" aria-valuemin="0" aria-valuemax="14" aria-valuenow="0">
+            <span id="progress-bar"></span>
+          </div>
+          <div class="progress-card-bottom">
+            <span id="xp-label">0 flight points</span>
+            <span class="level-pill" id="level-label">ROOKIE</span>
+          </div>
+        </div>
+      </div>
+      <div class="lesson-list-heading">
+        <span>COURSE MAP</span>
+        <button type="button" id="clear-search" class="text-button" hidden>Clear search</button>
+      </div>
+      <nav class="lesson-list" id="lesson-list" aria-label="Course modules"></nav>
+      <div class="sidebar-foot">
+        <div class="field-note-mark" aria-hidden="true">!</div>
+        <p>Build your knowledge on the ground. Fly with an instructor and follow local rules.</p>
+        <div class="sidebar-quick-links">
+          <a href="#quiz">Quiz centre <span aria-hidden="true">↗</span></a>
+          <a href="#how-to-use">How to use <span aria-hidden="true">↗</span></a>
+          <a href="#design-lab">Design lab <span aria-hidden="true">↗</span></a>
+          <a href="#field-guide">Field guide <span aria-hidden="true">↗</span></a>
+          <a href="#sources">Sources <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </aside>
+
+    <main id="main" class="main-content" tabindex="-1">
+      <div id="app"></div>
+    </main>
+  </div>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
